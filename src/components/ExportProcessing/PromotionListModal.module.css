@@ -1,0 +1,240 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 90vh;
+}
+
+/* Header */
+.header {
+  background-color: #fff;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.headerTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.closeBtn:hover {
+  background-color: #edf2f7;
+  color: var(--text-dark);
+}
+
+.body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0 12px;
+  width: 320px;
+  height: 36px;
+  transition: all 0.2s;
+}
+
+.searchBox:focus-within {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 108, 230, 0.1);
+}
+
+.searchIcon {
+  color: var(--text-light);
+  margin-right: 8px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  color: var(--text-dark);
+  background: transparent;
+  font-family: inherit;
+}
+
+.tableCard {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.stateBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  color: var(--text-gray);
+  gap: 12px;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  color: var(--primary-color);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.tableWrapper {
+  flex: 1;
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.thead th {
+  background-color: #f8fafc;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.tr {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tr:hover {
+  background-color: #f8fafc;
+}
+
+.table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-dark);
+}
+
+.codeLink {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.emptyRow {
+  text-align: center;
+  padding: 48px !important;
+  color: var(--text-gray);
+}
+
+.emptyIcon {
+  margin-bottom: 8px;
+  color: #cbd5e1;
+}
+
+.tableFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-top: 1px solid var(--border-color);
+  background-color: #fff;
+}
+
+.pagination {
+  display: flex;
+  gap: 4px;
+}
+
+.pageBtn {
+  min-width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  border-radius: 4px;
+  color: var(--text-dark);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.pageBtn:hover:not(:disabled) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.pageBtnActive {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+.pageBtnActive:hover {
+  color: #fff !important;
+}
+
+.pageBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f8fafc;
+}
+
+.footerInfo {
+  font-size: 13px;
+  color: var(--text-gray);
+}

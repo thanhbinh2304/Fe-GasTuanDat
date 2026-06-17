@@ -1,0 +1,39 @@
+.selectedBox {
+  display: flex;
+  align-items: center;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  padding: 6px 10px;
+  background-color: #f0f7ff;
+  gap: 8px;
+  min-height: 38px;
+}
+
+.selectedInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.selectedName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #007bff;
+}
+
+.selectedMeta {
+  font-size: 11px;
+  color: #555;
+}
+
+.clearBtn {
+  flex-shrink: 0;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.clearBtn:hover {
+  color: #dc3545;
+}

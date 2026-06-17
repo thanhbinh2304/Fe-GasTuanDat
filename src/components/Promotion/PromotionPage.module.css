@@ -1,0 +1,512 @@
+.pageWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  padding: 12px 16px;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 186px;
+  flex-shrink: 0;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--text-dark);
+  padding-bottom: 12px;
+}
+
+.sideSection {
+  padding: 14px 12px;
+}
+
+.sideSectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.sideLink {
+  font-size: 12px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.sideLink:hover,
+.sideLinkBtn:hover {
+  text-decoration: underline;
+}
+
+.sideLinkBtn {
+  font-size: 12px;
+  color: var(--primary-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+}
+
+.sideSectionTitle {
+  font-weight: 600;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.sideSelect {
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 12px;
+  color: var(--text-dark);
+  background-color: var(--white);
+  cursor: pointer;
+  outline: none;
+}
+
+.sideSelect:focus {
+  border-color: var(--primary-color);
+}
+
+.sideDivider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 0;
+}
+
+.sideList {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.sideList::-webkit-scrollbar {
+  width: 4px;
+}
+.sideList::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 4px;
+}
+.sideList::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-gray);
+}
+
+.sideListItem {
+  display: flex;
+  align-items: center;
+  padding: 6px 4px;
+  font-size: 13px;
+  color: var(--text-dark);
+  cursor: pointer;
+  gap: 8px;
+  border-radius: 4px;
+  transition: background-color 0.15s;
+}
+
+.sideListItem:hover {
+  background-color: #f5f7fa;
+}
+
+.gripIcon {
+  color: var(--text-gray);
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.editIcon {
+  margin-left: auto;
+  color: var(--text-gray);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.sideListItem:hover .editIcon {
+  opacity: 1;
+}
+
+.editIcon:hover {
+  color: var(--primary-color);
+}
+
+.itemCount {
+  color: var(--text-gray);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 5px 10px;
+  width: 100%;
+  max-width: 320px;
+  background-color: var(--white);
+  transition: border-color 0.2s;
+}
+
+.searchBox:focus-within {
+  border-color: var(--primary-color);
+}
+
+.searchIcon {
+  color: var(--text-gray);
+  flex-shrink: 0;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  font-size: 13px;
+  width: 100%;
+  color: var(--text-dark);
+  background: transparent;
+  font-family: inherit;
+}
+
+.searchInput::placeholder {
+  color: var(--text-light);
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+}
+
+.btnPrimary {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  font-family: inherit;
+}
+
+.btnPrimary:hover {
+  background-color: var(--primary-hover);
+}
+
+.tableCard {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.stateBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 60px 20px;
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  color: var(--primary-color);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.errorIcon {
+  color: var(--danger-color);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.thead {
+  background-color: #f3f4f6;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.thead th {
+  padding: 12px 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 13px;
+  white-space: nowrap;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.thCode {
+  width: 140px;
+}
+
+.thName {}
+
+.thUnit {
+  width: 90px;
+}
+
+.thNum {
+  width: 110px;
+  text-align: right !important;
+}
+
+.thNotes {
+  width: 220px;
+}
+
+.tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.12s;
+  cursor: pointer;
+}
+
+.tr:last-child {
+  border-bottom: none;
+}
+
+.tr:hover {
+  background-color: #f9fafb;
+}
+
+.tdCode {
+  padding: 12px 16px;
+  white-space: nowrap;
+}
+
+.tdName {
+  padding: 12px 16px;
+  color: var(--text-dark);
+}
+
+.tdUnit {
+  padding: 12px 16px;
+  color: var(--text-dark);
+}
+
+.tdNum {
+  padding: 12px 16px;
+  text-align: right;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.tdNotes {
+  padding: 12px 16px;
+  color: var(--text-gray);
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.negative {
+  color: var(--danger-color) !important;
+}
+
+.codeLink {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.codeLink:hover {
+  text-decoration: underline;
+}
+
+.emptyRow {
+  text-align: center !important;
+  padding: 50px !important;
+  color: var(--text-gray);
+}
+
+.emptyIcon {
+  display: block;
+  margin: 0 auto 8px;
+  color: var(--border-color);
+}
+
+.tableFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border-top: 1px solid var(--border-color);
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+.footerInfo {
+  font-size: 12px;
+}
+
+.pagination {
+  display: flex;
+  gap: 4px;
+}
+
+.pageBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background: var(--white);
+  color: var(--text-dark);
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+  padding: 0 6px;
+}
+
+.pageBtn:hover:not(:disabled) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.pageBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pageBtnActive {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white) !important;
+}
+
+.sideSearchBox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 5px 8px;
+  width: 100%;
+  background-color: var(--white);
+  transition: border-color 0.2s;
+  margin-top: 8px;
+}
+
+.sideSearchBox:focus-within {
+  border-color: var(--primary-color);
+}
+
+.sideSearchIcon {
+  color: var(--text-gray);
+  flex-shrink: 0;
+}
+
+.sideSearchInput {
+  border: none;
+  outline: none;
+  font-size: 12px;
+  width: 100%;
+  color: var(--text-dark);
+  background: transparent;
+  font-family: inherit;
+}
+
+.sideSearchInput::placeholder {
+  color: var(--text-light);
+}
+
+.dateFilterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.dateField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dateField label {
+  font-size: 12px;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+.dateInput {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 13px;
+  color: var(--text-dark);
+  background-color: var(--white);
+  outline: none;
+  font-family: inherit;
+}
+
+.dateInput:focus {
+  border-color: var(--primary-color);
+}
+
+.thTime,
+.thCreator {
+  width: 150px;
+}
+
+.tdTime,
+.tdCreator {
+  padding: 12px 16px;
+  color: var(--text-dark);
+  white-space: nowrap;
+}

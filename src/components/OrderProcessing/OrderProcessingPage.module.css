@@ -1,0 +1,635 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f2f5;
+  font-size: 14px;
+}
+
+/* TOP HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #007bff;
+  height: 50px;
+  color: white;
+  padding-left: 16px;
+}
+
+.searchSection {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  margin: 0 16px;
+  padding: 0 8px;
+  height: 36px;
+  width: 320px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 13px;
+  margin-left: 8px;
+  color: #333;
+}
+
+.tabsSection {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  background-color: #e5f1ff;
+  color: #007bff;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 4px 4px 0 0;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 14px;
+  cursor: pointer;
+  position: relative;
+  gap: 6px;
+  user-select: none;
+}
+
+.tabActive {
+  background-color: white;
+  color: #007bff;
+  font-weight: 600;
+}
+
+.closeTabBtn {
+  cursor: pointer;
+  color: #007bff;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+.closeTabBtn:hover { opacity: 1; }
+
+.addTabBtn {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: 8px;
+  margin-top: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+  padding: 4px;
+  border-radius: 3px;
+}
+.addTabBtn:hover { background: rgba(255,255,255,0.15); opacity: 1; }
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.banHangBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: white;
+  color: #007bff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s;
+}
+
+.banHangBtn:hover {
+  background-color: #f0f7ff;
+}
+
+/* MAIN BODY */
+.body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* LEFT COLUMN */
+.leftCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+}
+
+.topHalf {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.bottomHalf {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.middleSearchBar {
+  background-color: #007bff;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.searchSectionMiddle {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
+  padding: 0 8px;
+  height: 32px;
+  width: 320px;
+}
+
+.searchInputMiddle {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 13px;
+  margin-left: 8px;
+  color: #333;
+}
+
+.productList {
+  flex: 1;
+  overflow-y: auto;
+  background-color: white;
+  margin: 16px 16px 0;
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+.productRow {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  gap: 10px;
+}
+
+.indexBox {
+  width: 24px;
+  flex-shrink: 0;
+  text-align: center;
+  font-weight: 500;
+  color: #555;
+}
+
+.deleteIcon {
+  flex-shrink: 0;
+  color: #888;
+  cursor: pointer;
+}
+.deleteIcon:hover { color: red; }
+
+.prodCode {
+  flex-shrink: 0;
+  width: 90px;
+  font-weight: 500;
+  font-size: 13px;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prodName {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prodUnit {
+  flex-shrink: 0;
+  width: 50px;
+  color: #555;
+  font-size: 13px;
+  text-align: center;
+}
+
+.qtyInputBox {
+  flex-shrink: 0;
+  width: 70px;
+  text-align: center;
+}
+
+.qtyInput {
+  width: 100%;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid red;
+  outline: none;
+  font-weight: 500;
+  color: red;
+  background: transparent;
+}
+
+.priceInputBox {
+  flex-shrink: 0;
+  width: 100px;
+  text-align: right;
+}
+
+.priceInput {
+  width: 100%;
+  text-align: right;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 13px;
+  background: transparent;
+}
+
+.priceInput:focus {
+  border-bottom: 1px solid #007bff;
+}
+
+.totalBox {
+  flex-shrink: 0;
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.actionIcons {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 8px;
+  color: #888;
+  cursor: pointer;
+}
+
+.notesWrapper {
+  background-color: white;
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notesInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+/* RIGHT COLUMN */
+.rightCol {
+  width: 360px;
+  background-color: white;
+  border-left: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.dateTime {
+  color: #888;
+  font-size: 12px;
+}
+
+.supplierSearchWrapper {
+  padding: 12px 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.supplierSearch {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+
+.supplierSearch input {
+  border: none;
+  outline: none;
+  flex: 1;
+  margin-left: 8px;
+}
+
+.addSupplierBtn {
+  cursor: pointer;
+  color: #007bff;
+}
+
+.priceListWrapper {
+  padding: 0 16px 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.priceListSelect {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  outline: none;
+  background-color: #f8f9fa;
+  font-size: 13px;
+}
+
+.summaryTable {
+  padding: 0 16px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.summaryLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.summaryLabelBadge {
+  background-color: #007bff;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.styledInput {
+  width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  outline: none;
+  background-color: white;
+  color: #333;
+}
+
+.styledSelect {
+  width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  outline: none;
+  color: #333;
+  cursor: pointer;
+  background-color: white;
+}
+.styledSelect:focus, .styledInput:focus {
+  border-color: #007bff;
+}
+
+.summaryInput {
+  width: 100px;
+  text-align: right;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+.summaryTotalLabel {
+  font-weight: bold;
+}
+
+.summaryTotalValue {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.paymentMethods {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.paymentMethods label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.quickMoneyRow {
+  padding: 0 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.quickMoneyBtn {
+  border: 1px solid #e0e0e0;
+  background: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.quickMoneyBtn:hover {
+  background: #f0f0f0;
+}
+
+.bottomActions {
+  margin-top: auto;
+  display: flex;
+  padding: 16px;
+  gap: 8px;
+}
+
+.btnIn {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnXoa {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnThanhToan {
+  flex: 1;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.printArea {
+  display: none;
+}
+
+@media print {
+  .pageWrapper > * {
+    display: none !important;
+  }
+  .pageWrapper > .printArea {
+    display: block !important;
+  }
+  .printArea {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 210mm; /* A4 width */
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif;
+    font-size: 13px;
+    color: #000;
+  }
+  .printHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .printHeaderLeft {
+    width: 50%;
+  }
+  .printHeaderRight {
+    width: 50%;
+    text-align: left;
+    padding-left: 20px;
+  }
+  .printTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+  }
+  .printCompany {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+  }
+  .printText {
+    margin: 2px 0;
+    line-height: 1.4;
+  }
+  .printCustomerInfo {
+    margin-bottom: 12px;
+  }
+  .printCustomerRow {
+    display: flex;
+    margin: 4px 0;
+  }
+  .printTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+  }
+  .printTable th, .printTable td {
+    border: 1px solid #000;
+    padding: 6px;
+    text-align: left;
+  }
+  .printTable th {
+    font-weight: bold;
+    text-align: center;
+  }
+  .printTable td.center {
+    text-align: center;
+  }
+  .printTable td.right {
+    text-align: right;
+  }
+  .printTotals {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .printTotalsRow {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin: 4px 0;
+  }
+  .printTotalsRow.bold {
+    font-weight: bold;
+  }
+  .printTotalsLine {
+    width: 350px;
+    border-top: 2px solid #000;
+    margin: 4px 0;
+  }
+  .printSignatures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    text-align: center;
+  }
+  .printSigBox {
+    flex: 1;
+  }
+  .printSigBox strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+  .printSigBox em {
+    font-size: 12px;
+  }
+}

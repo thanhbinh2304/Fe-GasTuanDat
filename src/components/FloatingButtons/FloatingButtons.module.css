@@ -1,0 +1,48 @@
+.floatContainer {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 999;
+}
+
+.hotlineBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #006ce6;
+  color: #fff;
+  border-radius: 24px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(0, 108, 230, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hotlineBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 108, 230, 0.5);
+}
+
+.backTopBtn {
+  width: 38px;
+  height: 38px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 108, 230, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.backTopBtn:hover {
+  transform: translateY(-3px);
+}

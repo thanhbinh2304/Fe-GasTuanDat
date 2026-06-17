@@ -1,0 +1,141 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1608174427965-06e78e2f29a9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.loginBox {
+  background: #fff;
+  border-radius: 8px;
+  width: 420px;
+  max-width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.logoContainer {
+  padding: 30px 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1255a8;
+}
+
+.form {
+  padding: 0 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 42px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 0 36px 0 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.input:focus {
+  border-color: var(--primary-color);
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  cursor: pointer;
+}
+
+.eyeIcon:hover {
+  color: #666;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 13px;
+  color: #333;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.forgotPassword {
+  color: #559aff;
+  text-decoration: none;
+}
+
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+.loginBtn {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.loginBtn:hover {
+  background-color: var(--primary-hover);
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  color: #ccc;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footerItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footerDivider {
+  width: 1px;
+  height: 12px;
+  background-color: #666;
+}
