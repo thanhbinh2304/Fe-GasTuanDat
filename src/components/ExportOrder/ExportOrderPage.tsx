@@ -23,8 +23,8 @@ export default function ExportOrderPage() {
   const [page, setPage] = useState(1);
 
   const getLocalDate = () => new Date(Date.now() - new Date().getTimezoneOffset() * 60000).toISOString().split('T')[0];
-  const [startDate, setStartDate] = useState(getLocalDate());
-  const [endDate, setEndDate] = useState(getLocalDate());
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   const [keyword, setKeyword] = useState('');
   const [searchInput, setSearchInput] = useState('');

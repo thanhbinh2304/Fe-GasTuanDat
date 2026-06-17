@@ -77,7 +77,7 @@ export const getPurchaseOrders = async (params: PurchaseOrderFilterParams = {}):
   if (params.page) query.append('page', String(params.page));
   if (params.pageSize) query.append('limit', String(params.pageSize));
   
-  const res = await fetchClient(`/purchase-orders/search?${query.toString()}`, { method: 'GET' }) as any;
+  const res = await fetchClient(`/purchase-orders?${query.toString()}`, { method: 'GET' }) as any;
   return {
     data: (res.data || []).map(mapPurchaseOrder),
     total: res.pagination?.total || 0,

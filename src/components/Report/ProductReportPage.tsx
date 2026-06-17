@@ -20,8 +20,8 @@ const getUnitName = (unit: number) => {
 
 export default function ProductReportPage() {
   const [focus, setFocus] = useState('xuat_hang');
-  const [startDate, setStartDate] = useState(new Date(new Date().setMonth(new Date().getMonth() - 1)).toISOString().split('T')[0]);
-  const [endDate, setEndDate] = useState(new Date().toISOString().split('T')[0]);
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
   const [importData, setImportData] = useState<ImportReportItem[]>([]);
   const [exportData, setExportData] = useState<ExportReportItem[]>([]);
   const [loading, setLoading] = useState(false);

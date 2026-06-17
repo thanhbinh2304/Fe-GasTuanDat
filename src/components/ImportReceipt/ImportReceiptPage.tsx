@@ -21,8 +21,8 @@ export default function ImportReceiptPage() {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
 
-  const [startDate, setStartDate] = useState(new Date().toISOString().split('T')[0]);
-  const [endDate, setEndDate] = useState(new Date().toISOString().split('T')[0]);
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   const [keyword, setKeyword] = useState('');
   const [searchInput, setSearchInput] = useState('');

@@ -15,8 +15,8 @@ export default function DebtReceiptPage() {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
 
-  const [startDate, setStartDate] = useState(new Date(new Date().setMonth(new Date().getMonth() - 1)).toISOString().split('T')[0]);
-  const [endDate, setEndDate] = useState(new Date().toISOString().split('T')[0]);
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
 
   const [dueStartDate, setDueStartDate] = useState('');
   const [dueEndDate, setDueEndDate] = useState('');

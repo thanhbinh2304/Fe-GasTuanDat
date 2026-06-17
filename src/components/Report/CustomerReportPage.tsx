@@ -9,8 +9,8 @@ import { reportService, CustomerReportItem } from '@/services/reportService';
 const formatCurrency = (amount: number) => new Intl.NumberFormat('vi-VN').format(amount);
 
 export default function CustomerReportPage() {
-  const [startDate, setStartDate] = useState(new Date(new Date().setMonth(new Date().getMonth() - 1)).toISOString().split('T')[0]);
-  const [endDate, setEndDate] = useState(new Date().toISOString().split('T')[0]);
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
   const [data, setData] = useState<CustomerReportItem[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
